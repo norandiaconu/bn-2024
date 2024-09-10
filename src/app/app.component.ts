@@ -1,12 +1,9 @@
-import { Component, HostListener, OnChanges } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
     selector: 'app-root',
-    standalone: true,
-    imports: [RouterOutlet],
     templateUrl: './app.component.html',
-    styleUrl: './app.component.scss',
+    styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
     title = 'bn-2024';
