@@ -2,49 +2,41 @@
     <div class="toolbar">
         <hr />
         <div class="links">
-            <div>Home</div>
+            <div (click)="scroll(home)">Home</div>
             <div (click)="scroll(ourStory)">Our Story</div>
-            <div>Details</div>
-            <div>Getting There</div>
-            <div>Gallery</div>
-            <div>RSVP</div>
+            <div (click)="scroll(details)">Details</div>
+            <div (click)="scroll(gettingThere)">Getting There</div>
+            <div (click)="scroll(gallery)">Gallery</div>
+            <div (click)="scroll(rsvp)">RSVP</div>
         </div>
         <hr />
     </div>
-    <div class="bullets">
-        <ul class="circle">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
     <div class="page">
-        <div class="main-info">
+        <div class="main-info" #home>
             <div class="info title">Brittany & Noran</div>
             <div class="info">
                 <span class="location-date">November 16, 2024</span
                 ><span class="location-date">Hot Springs, NC</span>
             </div>
             <div class="info">Countdown</div>
-            <div class="info details-button">Details</div>
+            <div class="info details-button" (click)="scroll(details)">
+                Details
+            </div>
         </div>
     </div>
     <div class="page">
         <div class="title main" #ourStory>Our Story</div>
     </div>
     <div class="page">
-        <div class="title">Details</div>
+        <div class="title main" #details>Details</div>
     </div>
     <div class="page">
-        <div class="title">Getting There</div>
+        <div class="title main" #gettingThere>Getting There</div>
     </div>
     <div class="page">
-        <div class="title">Gallery</div>
+        <div class="title main" #gallery>Gallery</div>
     </div>
     <div class="page">
-        <div class="title">RSVP</div>
+        <div class="title main" #rsvp>RSVP</div>
     </div>
 </html>

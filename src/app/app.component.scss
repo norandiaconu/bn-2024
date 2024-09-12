@@ -17,20 +17,6 @@ html {
     justify-content: space-evenly;
 }
 
-.bullets {
-    position: fixed;
-    top: 42%;
-    right: 2%;
-}
-
-.disc {
-    list-style-type: disc;
-}
-
-.circle {
-    list-style-type: circle;
-}
-
 .page {
     height: 100vh;
     display: flex;
@@ -62,5 +48,5 @@ html {
 }
 
 .main {
-    padding-top: 20vh;
+    padding-top: 15vh;
 }
