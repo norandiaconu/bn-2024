@@ -17,6 +17,10 @@ html {
     justify-content: space-evenly;
 }
 
+.link {
+    cursor: pointer;
+}
+
 .page {
     height: 100vh;
     display: flex;
@@ -45,8 +49,20 @@ html {
 .details-button {
     padding: 0.5rem 2rem;
     border: 2px solid black;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
 .main {
-    padding-top: 15vh;
+    margin-top: 15vh;
+    padding-top: 3vh;
+    background-color: rgba(255, 230, 0, 0.5);
+    width: 70vw;
+    height: 70vh;
+    border-radius: 20px;
+}
+
+.page-title {
+    display: flex;
+    justify-content: center;
 }

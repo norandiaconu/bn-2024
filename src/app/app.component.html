@@ -2,12 +2,12 @@
     <div class="toolbar">
         <hr />
         <div class="links">
-            <div (click)="scroll(home)">Home</div>
-            <div (click)="scroll(ourStory)">Our Story</div>
-            <div (click)="scroll(details)">Details</div>
-            <div (click)="scroll(gettingThere)">Getting There</div>
-            <div (click)="scroll(gallery)">Gallery</div>
-            <div (click)="scroll(rsvp)">RSVP</div>
+            <div class="link" (click)="scroll(home)">Home</div>
+            <div class="link" (click)="scroll(ourStory)">Our Story</div>
+            <div class="link" (click)="scroll(details)">Details</div>
+            <div class="link" (click)="scroll(gettingThere)">Getting There</div>
+            <div class="link" (click)="scroll(gallery)">Gallery</div>
+            <div class="link" (click)="scroll(rsvp)">RSVP</div>
         </div>
         <hr />
     </div>
@@ -24,19 +24,29 @@
             </div>
         </div>
     </div>
-    <div class="page">
-        <div class="title main" #ourStory>Our Story</div>
+    <div class="page" #ourStory>
+        <div class="title main">
+            <div class="page-title">Our Story</div>
+        </div>
     </div>
-    <div class="page">
-        <div class="title main" #details>Details</div>
+    <div class="page" #details>
+        <div class="title main">
+            <div class="page-title">Details</div>
+        </div>
     </div>
-    <div class="page">
-        <div class="title main" #gettingThere>Getting There</div>
+    <div class="page" #gettingThere>
+        <div class="title main">
+            <div class="page-title">Getting There</div>
+        </div>
     </div>
-    <div class="page">
-        <div class="title main" #gallery>Gallery</div>
+    <div class="page" #gallery>
+        <div class="title main">
+            <div class="page-title">Gallery</div>
+        </div>
     </div>
-    <div class="page">
-        <div class="title main" #rsvp>RSVP</div>
+    <div class="page" #rsvp>
+        <div class="title main">
+            <div class="page-title">RSVP</div>
+        </div>
     </div>
 </html>
