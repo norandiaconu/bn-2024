@@ -1,14 +1,18 @@
 html {
-    font-size: large;
+    font-size: x-large;
     background-image: url(../assets/20160815_061126.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: top;
-    color: darkmagenta;
+    color: #593e67;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
 }
 
 .toolbar {
-    width: 100vw;
+    width: 60vw;
     position: fixed;
 }
 
@@ -22,7 +26,7 @@ html {
 }
 
 .page {
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
 }
@@ -36,33 +40,128 @@ html {
 
 .info {
     padding: 0.5rem 0;
+    display: flex;
+}
+
+.time-chunk {
+    border-right: 2px solid;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.secs-chunk {
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .title {
-    font-size: xx-large;
+    font-size: 4rem;
+    font-family: "Nothing You Could Do", cursive;
 }
 
 .location-date {
     padding: 0 1rem;
 }
 
+.border-right {
+    border-right: 2px solid;
+}
+
 .details-button {
     padding: 0.5rem 2rem;
     border: 2px solid black;
     border-radius: 20px;
+    margin-top: 1rem;
     cursor: pointer;
+    background-color: #fea83760;
 }
 
 .main {
-    margin-top: 15vh;
-    padding-top: 3vh;
-    background-color: rgba(255, 230, 0, 0.5);
-    width: 70vw;
-    height: 70vh;
+    margin-top: 10vh;
+    padding: 2rem;
+    background-color: #fea83760;
+    width: 80vw;
+    height: 50vh;
     border-radius: 20px;
 }
 
 .page-title {
     display: flex;
     justify-content: center;
+    font-size: 3rem;
+    font-family: "Nothing You Could Do", cursive;
+}
+
+.page-body {
+    padding: 2rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.details1 {
+    flex-basis: 50%;
+}
+
+.details2 {
+    flex-basis: 50%;
+}
+
+.details33 {
+    flex-basis: 33%;
+}
+
+.registry {
+    width: 20rem;
+}
+
+.table {
+    border-collapse: collapse;
+}
+
+.table-left {
+    border-right: 2px solid;
+    padding-right: 1rem;
+    text-align: right;
+}
+
+.table-right {
+    padding-left: 1rem;
+}
+
+.faqs {
+    display: flex;
+    justify-content: center;
+}
+
+.question {
+    padding-bottom: 1rem;
+}
+
+.there {
+    margin-bottom: 3rem;
+}
+
+.there1 {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.there2 {
+    flex-basis: 50%;
 }
