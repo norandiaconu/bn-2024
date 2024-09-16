@@ -8,7 +8,7 @@
         />
     </head>
     <div class="toolbar">
-        <hr />
+        <hr class="hr1" />
         <div class="links">
             <div class="link" (click)="scroll(home)">Home</div>
             <div class="link" (click)="scroll(ourStory)">Our Story</div>
@@ -17,7 +17,7 @@
             <div class="link" (click)="scroll(gettingThere)">Getting There</div>
             <div class="link" (click)="scroll(gallery)">Gallery</div>
         </div>
-        <hr />
+        <hr class="hr2" />
     </div>
     <div class="page">
         <div class="main-info" #home>
@@ -64,18 +64,8 @@
         <div class="main">
             <div class="page-title">Details</div>
             <div class="flex">
-                <div class="details details33">
-                    <b>Honeymoon Fund</b>
-                    <a href="https://withjoy.com/brittany-and-noran/registry" target="_blank">
-                        <img src="../assets/IMGA0007.JPG" class="registry" />
-                    </a>
-                    <div>
-                        Your attendance is all that's important to us! However, if you would like to give a gift, we ask that you contribute
-                        to our honeymoon fund at the link above.
-                    </div>
-                </div>
-                <div class="details details33">
-                    <b>Itinerary</b>
+                <div class="details detail1 itinerary">
+                    <b class="detail-title">Itinerary</b>
                     <table class="table">
                         <tr>
                             <td class="table-left">3pm</td>
@@ -103,12 +93,24 @@
                         </tr>
                     </table>
                 </div>
-                <div class="details details33">
-                    <b>RSVP</b>
-                    <a href="https://withjoy.com/brittany-and-noran/rsvp" target="_blank">
-                        <img src="../assets/with-joy.webp" class="registry" />
-                    </a>
-                    <div>Come on down and fill out a survey!</div>
+                <div class="detail2">
+                    <div class="details">
+                        <b class="detail-title">Honeymoon Fund</b>
+                        <a href="https://withjoy.com/brittany-and-noran/registry" target="_blank">
+                            <img src="../assets/IMGA0007.JPG" class="registry" />
+                        </a>
+                        <div>
+                            Your attendance is all that's important to us! However, if you would like to give a gift, we ask that you
+                            contribute to our honeymoon fund at the link above.
+                        </div>
+                    </div>
+                    <div class="details">
+                        <b class="detail-title">RSVP</b>
+                        <a href="https://withjoy.com/brittany-and-noran/rsvp" target="_blank">
+                            <img src="../assets/with-joy.webp" class="registry" />
+                        </a>
+                        <div>Come on down and fill out a survey!</div>
+                    </div>
                 </div>
             </div>
         </div>

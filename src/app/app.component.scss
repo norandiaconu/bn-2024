@@ -1,28 +1,51 @@
+$purple: #4c0121;
+$purple-transparent: #4c012160;
+$orange: #fea837;
+$orange-semi: #fea83790;
+$orange-transparent: #fea83760;
+
 html {
     font-size: x-large;
     background-image: url(../assets/20160815_061126.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: top;
-    color: #593e67;
+    color: $purple;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: "Montserrat", sans-serif;
 }
 
+hr {
+    border: 1px solid $purple-transparent;
+}
+
+.hr1 {
+    margin-bottom: 0;
+}
+
+.hr2 {
+    margin-top: 0;
+}
+
 .toolbar {
     width: 60vw;
-    position: fixed;
 }
 
 .links {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .link {
     cursor: pointer;
+    padding: 1rem 3rem;
+
+    &:hover {
+        background-color: $orange-semi;
+        transition: background-color 0.5s ease-out;
+    }
 }
 
 .page {
@@ -39,7 +62,7 @@ html {
 }
 
 .info {
-    padding: 0.5rem 0;
+    padding: 1rem 0;
     display: flex;
 }
 
@@ -65,27 +88,32 @@ html {
 
 .location-date {
     padding: 0 1rem;
-}
-
-.border-right {
-    border-right: 2px solid;
+    font-size: xx-large;
+    font-family: "Nothing You Could Do", cursive;
 }
 
 .details-button {
     padding: 0.5rem 2rem;
-    border: 2px solid black;
+    border: 2px solid $purple;
     border-radius: 20px;
     margin-top: 1rem;
     cursor: pointer;
-    background-color: #fea83760;
+    background-color: $orange-transparent;
+
+    &:hover {
+        background-color: $purple;
+        color: $orange;
+        border: 2px solid $orange;
+        transition: background-color 0.5s ease-out, color 0.5s ease-out, border 0.5s ease-out;
+    }
 }
 
 .main {
     margin-top: 10vh;
-    padding: 2rem;
-    background-color: #fea83760;
+    padding: 2rem 6rem;
+    background-color: $orange-transparent;
     width: 80vw;
-    height: 50vh;
+    min-height: 60vh;
     border-radius: 20px;
 }
 
@@ -94,10 +122,14 @@ html {
     justify-content: center;
     font-size: 3rem;
     font-family: "Nothing You Could Do", cursive;
+    padding-bottom: 2rem;
 }
 
 .page-body {
-    padding: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    font-size: xx-large;
 }
 
 .flex {
@@ -108,19 +140,25 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding-top: 2rem;
 }
 
-.details1 {
-    flex-basis: 50%;
+.detail1 {
+    flex-basis: 40%;
+    padding-right: 2rem;
 }
 
-.details2 {
-    flex-basis: 50%;
+.detail2 {
+    flex-basis: 60%;
+    padding-left: 2rem;
 }
 
-.details33 {
-    flex-basis: 33%;
+.detail-title {
+    padding-bottom: 2rem;
+}
+
+.itinerary {
+    font-size: xx-large;
 }
 
 .registry {
@@ -139,11 +177,6 @@ html {
 
 .table-right {
     padding-left: 1rem;
-}
-
-.faqs {
-    display: flex;
-    justify-content: center;
 }
 
 .question {
