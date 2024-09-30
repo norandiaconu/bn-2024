@@ -3,8 +3,11 @@ $purple-transparent: #4c012160;
 $orange: #fea837;
 $orange-semi: #fea83790;
 $orange-transparent: #fea83760;
+$main-title: 4rem;
+$page-title: 2rem;
+$body-text: 1rem;
 
-html {
+.container {
     font-size: x-large;
     background-image: url(../assets/20160815_061126.jpg);
     background-size: cover;
@@ -15,6 +18,18 @@ html {
     flex-direction: column;
     align-items: center;
     font-family: "Montserrat", sans-serif;
+
+    @media (orientation: portrait) or (max-width: 1000px) {
+        font-size: large;
+    }
+}
+
+.first-page {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5vh;
 }
 
 hr {
@@ -31,16 +46,25 @@ hr {
 
 .toolbar {
     width: 60vw;
+
+    @media (orientation: portrait) and (max-width: 1000px) {
+        width: 90vw;
+    }
 }
 
 .links {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .link {
     cursor: pointer;
     padding: 1rem 3rem;
+
+    @media (orientation: portrait) or (max-width: 1000px) {
+        padding: 1rem 0.5rem;
+    }
 
     &:hover {
         background-color: $orange-semi;
@@ -49,7 +73,6 @@ hr {
 }
 
 .page {
-    height: 90vh;
     display: flex;
     justify-content: center;
 }
@@ -64,6 +87,14 @@ hr {
 .info {
     padding: 1rem 0;
     display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.time-info {
+    padding: 1rem 0;
+    display: flex;
+    text-align: center;
 }
 
 .time-chunk {
@@ -82,8 +113,9 @@ hr {
 }
 
 .title {
-    font-size: 4rem;
+    font-size: $main-title;
     font-family: "Nothing You Could Do", cursive;
+    text-align: center;
 }
 
 .location-date {
@@ -109,20 +141,31 @@ hr {
 }
 
 .main {
-    margin-top: 10vh;
-    padding: 2rem 6rem;
+    margin: 5vh 0;
+    padding: 2rem 4rem;
     background-color: $orange-transparent;
     width: 80vw;
-    min-height: 60vh;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (orientation: portrait) or (max-width: 1000px) {
+        width: 80vw;
+        padding: 1rem 1rem;
+    }
 }
 
 .page-title {
     display: flex;
     justify-content: center;
-    font-size: 3rem;
+    font-size: $main-title;
     font-family: "Nothing You Could Do", cursive;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
+
+    @media (orientation: portrait) or (max-width: 1000px) {
+        font-size: $page-title;
+    }
 }
 
 .page-body {
@@ -130,61 +173,155 @@ hr {
     display: flex;
     align-items: center;
     font-size: xx-large;
+
+    @media (orientation: portrait) or (max-width: 1000px) {
+        font-size: large;
+    }
 }
 
-.flex {
+.all-details {
     display: flex;
+
+    @media (orientation: portrait) {
+        flex-direction: column;
+    }
 }
 
 .details {
     display: flex;
-    flex-direction: column;
     align-items: center;
     padding-top: 2rem;
+
+    @media (orientation: portrait) or (max-width: 1000px) {
+        padding-top: 0;
+    }
+
+    @media (orientation: portrait) {
+        flex-direction: column;
+    }
 }
 
 .detail1 {
-    flex-basis: 40%;
-    padding-right: 2rem;
+    flex-basis: 25%;
 }
 
 .detail2 {
-    flex-basis: 60%;
-    padding-left: 2rem;
+    flex-basis: 75%;
+    padding-left: 8rem;
+
+    @media (orientation: portrait) {
+        padding-left: 0;
+    }
+
+    @media (max-width: 1000px) {
+        padding-left: 1rem;
+    }
+}
+
+.detail-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 4rem;
+
+    @media (orientation: portrait) or (max-width: 1000px) {
+        padding-right: 1rem;
+    }
+}
+
+.detail-desc {
+    @media (orientation: portrait) or (max-width: 1000px) {
+        font-size: $body-text;
+    }
 }
 
 .detail-title {
     padding-bottom: 2rem;
+    font-family: "Nothing You Could Do", cursive;
+    font-size: 2.5rem;
+
+    @media (orientation: portrait) or (max-width: 1000px) {
+        font-size: $page-title;
+        padding-bottom: 0.5rem;
+    }
+}
+
+.detail-right-title {
+    padding-bottom: 2rem;
+    font-family: "Nothing You Could Do", cursive;
+    font-size: 2.2rem;
+
+    @media (orientation: portrait) or (max-width: 1000px) {
+        font-size: 1.8rem;
+        padding-bottom: 0.2rem;
+    }
+
+    @media (orientation: portrait) {
+        padding-top: 1rem;
+    }
 }
 
 .itinerary {
     font-size: xx-large;
+    display: flex;
+    flex-direction: column;
 }
 
 .registry {
     width: 20rem;
+    border-radius: 15px;
+    border: 2px solid $purple;
+
+    @media (orientation: portrait) or (max-width: 1000px) {
+        width: 16rem;
+    }
 }
 
 .table {
     border-collapse: collapse;
+
+    & > tr {
+        vertical-align: top;
+        padding: 0 2rem;
+    }
 }
 
 .table-left {
     border-right: 2px solid;
-    padding-right: 1rem;
+    padding: 0.5rem 1rem 0 0;
     text-align: right;
+    font-family: "Nothing You Could Do", cursive;
+    font-size: 2.2rem;
+
+    @media (orientation: portrait) or (max-width: 1000px) {
+        font-size: 1.5rem;
+    }
 }
 
 .table-right {
-    padding-left: 1rem;
+    padding: 0.5rem 0 0 1rem;
+    font-size: 1.8rem;
+
+    @media (orientation: portrait) or (max-width: 1000px) {
+        font-size: $body-text;
+    }
 }
 
-.question {
-    padding-bottom: 1rem;
+.answer {
+    padding: 0 0 1rem 2rem;
 }
 
-.there {
-    margin-bottom: 3rem;
+.last-answer {
+    padding-left: 2rem;
+}
+
+.there-container {
+    display: flex;
+
+    @media (orientation: portrait) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .there1 {
@@ -195,6 +332,53 @@ hr {
     align-items: center;
 }
 
+.venue-info {
+    padding-bottom: 0.4rem;
+    font-family: "Nothing You Could Do", cursive;
+    font-size: 2.5rem;
+
+    @media (orientation: portrait) or (max-width: 1000px) {
+        font-size: 1.8rem;
+    }
+}
+
+.venue {
+    padding-bottom: 0.5rem;
+    font-size: 1.8rem;
+
+    @media (orientation: portrait) or (max-width: 1000px) {
+        font-size: 1.5rem;
+    }
+}
+
+.address {
+    font-size: 1.5rem;
+
+    @media (orientation: portrait) or (max-width: 1000px) {
+        font-size: 1.4rem;
+    }
+}
+
 .there2 {
     flex-basis: 50%;
+}
+
+.map {
+    width: 40vw;
+    height: 40vh;
+
+    @media (orientation: portrait) and (max-width: 1000px) {
+        width: 80vw;
+        height: 30vh;
+        padding-top: 1rem;
+    }
+
+    @media (orientation: landscape) and (max-width: 1000px) {
+        width: 60vw;
+        height: 60vh;
+    }
+}
+
+.last-page {
+    padding-bottom: 10vh;
 }

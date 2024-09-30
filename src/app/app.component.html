@@ -1,48 +1,42 @@
-<html>
-    <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nothing+You+Could+Do&display=swap"
-            rel="stylesheet"
-        />
-    </head>
-    <div class="toolbar">
-        <hr class="hr1" />
-        <div class="links">
-            <div class="link" (click)="scroll(home)">Home</div>
-            <div class="link" (click)="scroll(ourStory)">Our Story</div>
-            <div class="link" (click)="scroll(details)">Details</div>
-            <div class="link" (click)="scroll(faqs)">FAQs</div>
-            <div class="link" (click)="scroll(gettingThere)">Getting There</div>
-            <div class="link" (click)="scroll(gallery)">Gallery</div>
-        </div>
-        <hr class="hr2" />
-    </div>
-    <div class="page">
-        <div class="main-info" #home>
-            <div class="info title">Brittany & Noran</div>
-            <div class="info"><span class="location-date">November 16, 2024</span><span class="location-date">Hot Springs, NC</span></div>
-            <div class="info">
-                <div class="time-chunk">
-                    <div>{{ days }}</div>
-                    <div>days</div>
-                </div>
-                <div class="time-chunk">
-                    <div>{{ hours }}</div>
-                    <div>hrs</div>
-                </div>
-                <div class="time-chunk">
-                    <div>{{ minutes }}</div>
-                    <div>mins</div>
-                </div>
-                <div class="secs-chunk">
-                    <div>{{ seconds }}</div>
-                    <div>secs</div>
-                </div>
+<div class="container">
+    <div class="first-page">
+        <div class="toolbar">
+            <hr class="hr1" />
+            <div class="links">
+                <div class="link" (click)="scroll(ourStory)">Our Story</div>
+                <div class="link" (click)="scroll(details)">Details</div>
+                <div class="link" (click)="scroll(faqs)">FAQs</div>
+                <div class="link" (click)="scroll(gettingThere)">Getting There</div>
             </div>
+            <hr class="hr2" />
+        </div>
+        <div class="page">
+            <div class="main-info" #home>
+                <div class="info title">Brittany & Noran</div>
+                <div class="info">
+                    <span class="location-date">November 16, 2024</span><span class="location-date">Hot Springs, NC</span>
+                </div>
+                <div class="time-info">
+                    <div class="time-chunk">
+                        <div>{{ days }}</div>
+                        <div>days</div>
+                    </div>
+                    <div class="time-chunk">
+                        <div>{{ hours }}</div>
+                        <div>hrs</div>
+                    </div>
+                    <div class="time-chunk">
+                        <div>{{ minutes }}</div>
+                        <div>mins</div>
+                    </div>
+                    <div class="secs-chunk">
+                        <div>{{ seconds }}</div>
+                        <div>secs</div>
+                    </div>
+                </div>
 
-            <div class="info details-button" (click)="scroll(details)">Details</div>
+                <div class="info details-button" (click)="scroll(details)">Details</div>
+            </div>
         </div>
     </div>
     <div class="page" #ourStory>
@@ -63,9 +57,9 @@
     <div class="page" #details>
         <div class="main">
             <div class="page-title">Details</div>
-            <div class="flex">
+            <div class="all-details">
                 <div class="details detail1 itinerary">
-                    <b class="detail-title">Itinerary</b>
+                    <div class="detail-title">Itinerary</div>
                     <table class="table">
                         <tr>
                             <td class="table-left">3pm</td>
@@ -95,21 +89,28 @@
                 </div>
                 <div class="detail2">
                     <div class="details">
-                        <b class="detail-title">Honeymoon Fund</b>
-                        <a href="https://withjoy.com/brittany-and-noran/registry" target="_blank">
-                            <img src="../assets/IMGA0007.JPG" class="registry" />
-                        </a>
-                        <div>
+                        <div class="detail-links">
+                            <div class="detail-right-title">Honeymoon Fund</div>
+                            <a href="https://withjoy.com/brittany-and-noran/registry" target="_blank">
+                                <img src="assets/IMGA0007.JPG" class="registry" />
+                            </a>
+                        </div>
+                        <div class="detail-desc">
                             Your attendance is all that's important to us! However, if you would like to give a gift, we ask that you
-                            contribute to our honeymoon fund at the link above.
+                            contribute to our honeymoon fund
+                            <a href="https://withjoy.com/brittany-and-noran/registry" target="_blank">here</a>.
                         </div>
                     </div>
                     <div class="details">
-                        <b class="detail-title">RSVP</b>
-                        <a href="https://withjoy.com/brittany-and-noran/rsvp" target="_blank">
-                            <img src="../assets/with-joy.webp" class="registry" />
-                        </a>
-                        <div>Come on down and fill out a survey!</div>
+                        <div class="detail-links">
+                            <div class="detail-right-title">RSVP</div>
+                            <a href="https://withjoy.com/brittany-and-noran/rsvp" target="_blank">
+                                <img src="assets/with-joy.webp" class="registry" />
+                            </a>
+                        </div>
+                        <div class="detail-desc">
+                            Come on down and fill out a <a href="https://withjoy.com/brittany-and-noran/rsvp" target="_blank">survey</a>!
+                        </div>
                     </div>
                 </div>
             </div>
@@ -118,39 +119,41 @@
     <div class="page" #faqs>
         <div class="main">
             <div class="page-title">FAQs</div>
-            <div class="question"><b>What should I wear? </b>Semi-formal attire meaning, no ties but preferably no jeans.</div>
-            <div class="question"><b>What are we eating? </b>Breakfast for dinner!</div>
-            <div class="question">
-                <b>Indoors or outdoors? </b>We are planning to have everything outside but will move inside or have a tent for inclement
-                weather.
+            <b>What should I wear? </b>
+            <div class="answer">Semi-formal attire meaning, no ties but preferably no jeans.</div>
+            <b>What are we eating? </b>
+            <div class="answer">Breakfast for dinner!</div>
+            <b>Indoors or outdoors? </b>
+            <div class="answer">We are planning to have everything outside but will move inside or have a tent for inclement weather.</div>
+            <b>What's the parking situation? </b>
+            <div class="answer">
+                Parking will be somewhat tight, so carpooling is encouraged. Please do not park directly to the left of the main cabin per
+                venue rules.
             </div>
-            <div class="question">
-                <b>What's the parking situation? </b>Parking will be somewhat tight, so carpooling is encouraged. Please do not park
-                directly to the left of the main cabin per venue rules.
-            </div>
-            <div class="question"><b>Will alcoholic beverages be served? </b>We will have 2-3 signature cocktails and beer available.</div>
-            <div>
-                <b>Can I bring a plus one? </b>Please discuss additional guests with Brittany at least 3 weeks before the day of the wedding
-                to ensure an accurate headcount for our caterer.
+            <b>Will alcoholic beverages be served? </b>
+            <div class="answer">We will have 2-3 signature cocktails and beer available.</div>
+            <b>Can I bring a plus one? </b>
+            <div class="last-answer">
+                Please discuss additional guests with Brittany at least 3 weeks before the day of the wedding to ensure an accurate
+                headcount for our caterer.
             </div>
         </div>
     </div>
-    <div class="page" #gettingThere>
+    <div class="page last-page" #gettingThere>
         <div class="main">
-            <div class="page-title there">Getting There</div>
-            <div class="flex">
+            <div class="page-title">Getting There</div>
+            <div class="there-container">
                 <div class="there1">
-                    <div>Venue Info</div>
-                    <div>The Heavens</div>
-                    <div>19997 NC-209</div>
-                    <div>Hot Springs, NC</div>
-                    <div>28743</div>
+                    <div class="venue-info">Venue Info</div>
+                    <div class="venue">The Heavens</div>
+                    <div class="address">19997 NC-209</div>
+                    <div class="address">Hot Springs, NC</div>
+                    <div class="address">28743</div>
                 </div>
                 <div class="there2">
                     <iframe
+                        class="map"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d414784.93413340684!2d-83.50025121093746!3d35.689131999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885981ff925358ff%3A0x5e8f6fff6d54baf0!2sThe%20Heavens%20Venue!5e0!3m2!1sen!2sus!4v1726239909947!5m2!1sen!2sus"
-                        width="400"
-                        height="300"
                         style="border: 0"
                         allowfullscreen=""
                         loading="lazy"
@@ -160,9 +163,4 @@
             </div>
         </div>
     </div>
-    <div class="page" #gallery>
-        <div class="main">
-            <div class="page-title">Gallery</div>
-        </div>
-    </div>
-</html>
+</div>
