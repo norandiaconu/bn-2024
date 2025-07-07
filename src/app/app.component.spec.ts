@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 describe('AppComponent', () => {
     beforeEach(() =>
         TestBed.configureTestingModule({
-            declarations: [AppComponent],
+            imports: [AppComponent],
         })
     );
 
@@ -14,7 +14,7 @@ describe('AppComponent', () => {
         expect(app).toBeTruthy();
     });
 
-    it(`should have as title 'bn-2024'`, () => {
+    it('should have as title bn-2024', () => {
         const fixture = TestBed.createComponent(AppComponent);
         const app = fixture.componentInstance;
         expect(app.title).toEqual('bn-2024');
