@@ -61,6 +61,8 @@ hr {
 .link {
     cursor: pointer;
     padding: 1rem 3rem;
+    background: none;
+    border: none;
 
     @media (orientation: portrait) or (max-width: 1000px) {
         padding: 1rem 0.5rem;
@@ -70,6 +72,12 @@ hr {
         background-color: $orange-semi;
         transition: background-color 0.5s ease-out;
     }
+}
+
+.btn {
+    font-size: x-large;
+    color: $purple;
+    font-family: "Montserrat", sans-serif;
 }
 
 .page {
