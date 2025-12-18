@@ -1,6 +1,6 @@
 {
     "name": "bn-2024",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "scripts": {
         "start": "ng serve",
         "build": "ng build && vite preview --port 8080 --outDir ./docs/browser --open",

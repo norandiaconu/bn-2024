@@ -3,15 +3,14 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
-    standalone: true,
+    styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    title = 'bn-2024';
-    days = 0;
-    hours = 0;
-    minutes = 0;
-    seconds = 0;
+    protected title = 'bn-2024';
+    protected days = 0;
+    protected hours = 0;
+    protected minutes = 0;
+    protected seconds = 0;
 
     constructor() {
         const countDownDate = new Date('Nov 16, 2024 15:00:00').getTime();
@@ -25,7 +24,7 @@ export class AppComponent {
         }, 1000);
     }
 
-    public scroll(el: HTMLElement): void {
+    protected scroll(el: HTMLElement): void {
         el.scrollIntoView({ behavior: 'smooth' });
     }
 }
